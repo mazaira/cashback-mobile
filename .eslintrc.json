@@ -22,5 +22,8 @@
         "react"
     ],
     "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "no-use-before-define": ["error", { "variables": false }],
+        "react/jsx-one-expression-per-line": ["error", { "allow": "single-child" }]
     }
 }
