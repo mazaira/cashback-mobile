@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const SettingsScreen = () => {
-  return (
-    <View style={styles.mainBlock}>
-      <Text> Settings screen</Text>
-    </View>
-  );
-};
+const SettingsScreen = () => (
+  <View style={styles.mainBlock}>
+    <Text> Settings screen</Text>
+  </View>
+);
 
 const styles = StyleSheet.create({
   mainBlock: {
