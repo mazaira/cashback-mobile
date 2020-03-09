@@ -7,14 +7,14 @@ export default () => {
 
   const fetchAccount = async (accountId) => {
     try {
-      const response = await backend.get('/accounts/1',{params: {id: accountId}});
+      const response = await backend.get('/accounts/1', { params: { id: accountId } });
       setAccount(response.data);
     } catch (err) {
-      setErrorMessage('Something went wrong')
+      setErrorMessage('Something went wrong');
     }
   };
 
-  useEffect(() => { fetchAccount('1') }, []);
+  useEffect(() => { fetchAccount('1'); }, []);
 
-  return [fetchAccount, account, errorMessage]
+  return [account, errorMessage];
 };

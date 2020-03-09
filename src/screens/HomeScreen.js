@@ -1,17 +1,20 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import QRCode from 'react-native-qrcode-svg';
 import ProfileCard from '../components/ProfileCard';
 import useBackend from '../hooks/useBackend';
 
 const HomeScreen = () => {
-  const [fetchAccount, account, errorMessage] = useBackend();
+  const [account, errorMessage] = useBackend();
 
-  return <View style={styles.mainBlock}>
-    {errorMessage ? <Text> {errorMessage} </Text> : null }
+  return (
+    <View style={styles.mainBlock}>
+      {errorMessage
+        ? <Text>{errorMessage}</Text>
+        : null }
 
-    <ProfileCard account={account}/>
-  </View>
+      <ProfileCard account={account} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -20,7 +23,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });
 
